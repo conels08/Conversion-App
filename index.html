@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <header class="header-container">
+            <h1 class="title">Metric / Imperial<br>Unit Conversion</h1>
+            <form id="converter-form">
+                <label for="number-of-units" class="sr-only">Enter value to convert</label>
+                <input value="" placeholder="0" name="user-input" id="number-of-units" type="text" />
+                <button type="submit" id="convert-btn">Convert</button>
+            </form>
+        </header>
+        <main class="main-container">
+            <div class="section-wrapper">
+                <h2 class="unit-title">Length (Meters/Feet)</h2>
+                <div class="long-line">
+                    <!-- meters to feet -->
+                    <p id="input-meters" class="input-amount input-output"></p>
+                    <p id="output-feet" class="input-output"></p><span> | </span>
+                    <!-- feet to meters -->
+                    <p id="input-feet" class="input-amount input-output"></p>
+                    <p id="output-meters" class="input-output"></p>
+                </div>
+            </div>
+            
+            <div class="section-wrapper">
+                <h2 class="unit-title">Volume (Liters/Gallons)</h2>
+                <div class="long-line">
+                    <!-- liters to gallons -->
+                    <p id="input-liters" class="input-amount input-output"></p>
+                    <p id="output-gallons" class="input-output"></p><span> | </span>
+                    <!-- gallons to liters -->
+                    <p id="input-gallons" class="input-amount input-output"></p>
+                    <p id="output-liters" class="input-output"></p>
+                </div>
+            </div>
+            
+            <div class="section-wrapper">
+                <h2 class="unit-title">Mass (Kilos/Pounds)</h2>
+                <div class="long-line">
+                    <!-- kilos to pounds -->
+                    <p id="input-kg" class="input-amount input-output"></p>
+                    <p id="output-pounds" class="input-output"></p><span> | </span>
+                    <!-- pounds to kilos -->
+                    <p id="input-lbs" class="input-amount input-output"></p>
+                    <p id="output-kilos" class="input-output"></p>
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
