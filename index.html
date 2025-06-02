@@ -9,9 +9,15 @@
     <body>
         <header class="header-container">
             <h1 class="title">Metric / Imperial<br>Unit Conversion</h1>
+
             <form id="converter-form">
                 <label for="number-of-units" class="sr-only">Enter value to convert</label>
-                <input value="" placeholder="0" name="user-input" id="number-of-units" type="text" />
+
+                <div class="input-wrapper">
+                    <input value="" placeholder="0" name="user-input" id="number-of-units" type="text" />
+                    <span id="width-mirror"></span>
+                </div>
+
                 <button type="submit" id="convert-btn">Convert</button>
             </form>
         </header>
@@ -21,7 +27,8 @@
                 <div class="long-line">
                     <!-- meters to feet -->
                     <p id="input-meters" class="input-amount input-output"></p>
-                    <p id="output-feet" class="input-output"></p><span> | </span>
+                    <p id="output-feet" class="input-output"></p>
+                    <span class="separator">|</span>
                     <!-- feet to meters -->
                     <p id="input-feet" class="input-amount input-output"></p>
                     <p id="output-meters" class="input-output"></p>
@@ -33,7 +40,8 @@
                 <div class="long-line">
                     <!-- liters to gallons -->
                     <p id="input-liters" class="input-amount input-output"></p>
-                    <p id="output-gallons" class="input-output"></p><span> | </span>
+                    <p id="output-gallons" class="input-output"></p>
+                    <span class="separator">|</span>
                     <!-- gallons to liters -->
                     <p id="input-gallons" class="input-amount input-output"></p>
                     <p id="output-liters" class="input-output"></p>
@@ -45,7 +53,8 @@
                 <div class="long-line">
                     <!-- kilos to pounds -->
                     <p id="input-kg" class="input-amount input-output"></p>
-                    <p id="output-pounds" class="input-output"></p><span> | </span>
+                    <p id="output-pounds" class="input-output"></p>
+                    <span class="separator">|</span>
                     <!-- pounds to kilos -->
                     <p id="input-lbs" class="input-amount input-output"></p>
                     <p id="output-kilos" class="input-output"></p>

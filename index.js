@@ -8,6 +8,25 @@ const inputEl = document.getElementById("number-of-units")
 let inputAmount = document.querySelectorAll(".input-amount")
 const convertBtn = document.getElementById("convert-btn")
 
+let feetOut = document.getElementById("output-feet")
+let metersOut = document.getElementById("output-meters")
+let gallonsOut = document.getElementById("output-gallons")
+let litersOut = document.getElementById("output-liters")
+let poundsOut = document.getElementById("output-pounds")
+let kilosOut = document.getElementById("output-kilos")
+
+const mirrorSpan = document.getElementById("width-mirror")
+
+// Mirror the input value in the span element
+
+inputEl.addEventListener("input", function () {
+    mirrorSpan.textContent = inputEl.value
+    const width = mirrorSpan.offsetWidth + 10 // add a little padding
+    inputEl.style.width = width + "px"
+})
+
+// Add event listener to the convert button
+
 convertBtn.addEventListener("click", function(event) {
     event.preventDefault()
     
@@ -20,14 +39,14 @@ convertBtn.addEventListener("click", function(event) {
     const lbs = kgToLbs(inputValue)
     const kg = lbsToKg(inputValue)
     
-    document.getElementById("output-feet").textContent = `${inputValue} meters = ${feet} feet`
-    document.getElementById("output-meters").textContent = `${inputValue} feet = ${meters} meters`
+    feetOut.textContent = `${inputValue} meters = ${feet} feet`
+    metersOut.textContent = `${inputValue} feet = ${meters} meters`
 
-    document.getElementById("output-gallons").textContent = `${inputValue} liters = ${gallons} gallons`
-    document.getElementById("output-liters").textContent = `${inputValue} gallons = ${liters} liters`
+    gallonsOut.textContent = `${inputValue} liters = ${gallons} gallons`
+    litersOut.textContent = `${inputValue} gallons = ${liters} liters`
 
-    document.getElementById("output-pounds").textContent = `${inputValue} kilos = ${lbs} pounds`
-    document.getElementById("output-kilos").textContent = `${inputValue} pounds = ${kg} kilos`
+    poundsOut.textContent = `${inputValue} kilos = ${lbs} pounds`
+    kilosOut.textContent = `${inputValue} pounds = ${kg} kilos`
 })
 
 function feetToMeters(numOfFeet) {

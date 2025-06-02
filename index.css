@@ -26,7 +26,9 @@ input::placeholder,
 input[type="text"] {
     color: #fff;
 }
-/*  */
+
+    /* Typography */
+
 h1 {
     font-size: 28px;
     font-weight: 800;
@@ -35,22 +37,27 @@ h1 {
 
 input[type="text"] {
     font-size: 58px;
+    min-width: 115px;
     width: 115px;
+    max-width: 500px;
+    padding: 0;
     text-align: center;
     border: 2px solid #B295FF;
     border-radius: 5px;
     box-shadow: 0 0 2px #000;
+    transition: width 0.2s ease;
 }
 
 button {
     display: block;
+    align-self: center;
     font-weight: 500;
     font-size: 16px;
-    width: 115px;
+    min-width: 115px;
     color: #3D3D3D;
-    margin: 1em 0;
+    margin: 1em auto;
     padding: 5px 0px;
-    box-shadow: 0px 0px 1px 0px #0000000d;
+    box-shadow: 0px 0px 1px 0px #000000;
     border: none;
     border-radius: 5px;
 }
@@ -72,9 +79,25 @@ input[type="text"] {
     justify-content: center;
     width: 100%;
     max-width: 900px;
-    min-width: 300px
+    min-width: 300px;
     padding: 1em;
     gap: 2em
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+
+}
+
+#width-mirror {
+    position: absolute;
+    visibility: hidden;
+    white-space: pre;
+    font-size: 58px;
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    border: 0;
 }
 
 .unit-title {
@@ -127,6 +150,7 @@ input[type="text"] {
     max-width: 650px;
     min-height: 100px;
     padding: 1.2em .5em;
+    box-shadow: 0px 0px 1px 0px #0000000d;
 }
 
 .long-line {
@@ -134,4 +158,11 @@ input[type="text"] {
     justify-content: center;
     align-items: baseline;
     gap: 1em;
+}
+
+.separator {
+    color: #CCC1FF;
+    font-size: 16px;
+    font-weight: 600;
+    align-self: center;
 }
